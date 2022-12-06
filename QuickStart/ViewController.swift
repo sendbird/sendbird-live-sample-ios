@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         
         uikitVersionLabel.text = "Live v1.0.0"
         sdkVersionLabel.text = "SDK v\(SendbirdLive.version)"
+        
+        self.userIdTextField.text = UserDefaults.standard.value(forKey: "userId") as? String
+        self.accessTokenTextField.text = UserDefaults.standard.value(forKey: "accessToken") as? String
+        self.applicationIdTextField.text = UserDefaults.standard.value(forKey: "applicationId") as? String
     }
     
     @IBAction func didTapSignInButton(_ sender: Any) {
@@ -35,6 +39,9 @@ class ViewController: UIViewController {
             SBUGlobals.currentUser = SBUUser(userId: userId)
             SBUGlobals.accessToken = accessToken
             
+            UserDefaults.standard.set(userId, forKey: "userId")
+            UserDefaults.standard.set(accessToken, forKey: "accessToken")
+            UserDefaults.standard.set(applicationId, forKey: "applicationId")
             DispatchQueue.main.async {
                 self.presentMainVC()
             }

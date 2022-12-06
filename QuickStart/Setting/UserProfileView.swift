@@ -61,7 +61,13 @@ final class UserProfileView: UnderLineView {
     }
     
     func updateUI(user: SBUUser) {
-        profileImageView.loadImage(urlString: user.profileURL ?? "", placeholder: UIImage(named: "iconUser"))
+        if let profileURL = user.profileURL, !profileURL.isEmpty {
+            profileImageView.loadImage(urlString: profileURL)
+        } else {
+            profileImageView.image = UIImage(named: "iconUser")?.sbu_with(tintColor: .white)
+            profileImageView.contentMode = .center
+        }
+        
         userNameLabel.text = user.refinedNickname()
     }
     
