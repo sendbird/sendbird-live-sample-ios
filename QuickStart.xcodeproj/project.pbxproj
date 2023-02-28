@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529D014829ADD9F600284843 /* SendbirdLiveUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 529D014729ADD9F600284843 /* SendbirdLiveUIKit */; };
 		52FD164728BC868400918E8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD164628BC868400918E8E /* AppDelegate.swift */; };
 		52FD164928BC868400918E8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD164828BC868400918E8E /* SceneDelegate.swift */; };
 		52FD164B28BC868400918E8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FD164A28BC868400918E8E /* ViewController.swift */; };
@@ -25,35 +26,10 @@
 		5FA0A5C028E6974900139F58 /* SettingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0A5BF28E6974900139F58 /* SettingActionButton.swift */; };
 		5FA0A5C328E69C4700139F58 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0A5C228E69C4700139F58 /* AppInfoViewController.swift */; };
 		5FA0A5C528E69D1200139F58 /* SettingLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0A5C428E69D1200139F58 /* SettingLabelView.swift */; };
-		91DC081728FBDB5C003885D1 /* SendbirdUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC081628FBDB5C003885D1 /* SendbirdUIKit.framework */; };
-		91DC081828FBDB5C003885D1 /* SendbirdUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC081628FBDB5C003885D1 /* SendbirdUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91DC082B28FC0C56003885D1 /* SendbirdLiveUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC080628FBD437003885D1 /* SendbirdLiveUIKit.framework */; };
-		91DC082C28FC0C56003885D1 /* SendbirdLiveUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC080628FBD437003885D1 /* SendbirdLiveUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91DC082F28FC0C7E003885D1 /* SendbirdChatSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 91DC082E28FC0C7E003885D1 /* SendbirdChatSDK */; };
-		91DC083128FC0C8C003885D1 /* SendbirdLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC083028FC0C8C003885D1 /* SendbirdLiveSDK.framework */; };
-		91DC083228FC0C8C003885D1 /* SendbirdLiveSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC083028FC0C8C003885D1 /* SendbirdLiveSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91DC083528FC0CA7003885D1 /* SendbirdCallsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91DC083428FC0CA7003885D1 /* SendbirdCallsCore */; };
-		91DC083828FC0CB3003885D1 /* SendbirdCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 91DC083728FC0CB3003885D1 /* SendbirdCommon */; };
 		91DC083D28FC4F72003885D1 /* SignInManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC083B28FC4F72003885D1 /* SignInManuallyViewController.swift */; };
 		91DC083E28FC4F72003885D1 /* SignInWithQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC083928FC4F72003885D1 /* SignInWithQRViewController.swift */; };
 		91DC084228FC53CF003885D1 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DC083C28FC4F72003885D1 /* QRCodeViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		91DC081928FBDB5C003885D1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				91DC083228FC0C8C003885D1 /* SendbirdLiveSDK.framework in Embed Frameworks */,
-				91DC082C28FC0C56003885D1 /* SendbirdLiveUIKit.framework in Embed Frameworks */,
-				91DC081828FBDB5C003885D1 /* SendbirdUIKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		52FD164328BC868400918E8E /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,12 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DC083828FC0CB3003885D1 /* SendbirdCommon in Frameworks */,
-				91DC082B28FC0C56003885D1 /* SendbirdLiveUIKit.framework in Frameworks */,
-				91DC081728FBDB5C003885D1 /* SendbirdUIKit.framework in Frameworks */,
-				91DC083128FC0C8C003885D1 /* SendbirdLiveSDK.framework in Frameworks */,
-				91DC082F28FC0C7E003885D1 /* SendbirdChatSDK in Frameworks */,
-				91DC083528FC0CA7003885D1 /* SendbirdCallsCore in Frameworks */,
+				529D014829ADD9F600284843 /* SendbirdLiveUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +162,6 @@
 				52FD163F28BC868400918E8E /* Sources */,
 				52FD164028BC868400918E8E /* Frameworks */,
 				52FD164128BC868400918E8E /* Resources */,
-				91DC081928FBDB5C003885D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,9 +169,7 @@
 			);
 			name = QuickStart;
 			packageProductDependencies = (
-				91DC082E28FC0C7E003885D1 /* SendbirdChatSDK */,
-				91DC083428FC0CA7003885D1 /* SendbirdCallsCore */,
-				91DC083728FC0CB3003885D1 /* SendbirdCommon */,
+				529D014729ADD9F600284843 /* SendbirdLiveUIKit */,
 			);
 			productName = QuickStart;
 			productReference = 52FD164328BC868400918E8E /* QuickStart.app */;
@@ -232,9 +200,7 @@
 			);
 			mainGroup = 52FD163A28BC868400918E8E;
 			packageReferences = (
-				91DC082D28FC0C7E003885D1 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */,
-				91DC083328FC0CA7003885D1 /* XCRemoteSwiftPackageReference "calls-core-ios" */,
-				91DC083628FC0CB3003885D1 /* XCRemoteSwiftPackageReference "common-ios" */,
+				529D014629ADD9F600284843 /* XCRemoteSwiftPackageReference "sendbird-live-uikit-ios" */,
 			);
 			productRefGroup = 52FD164428BC868400918E8E /* Products */;
 			projectDirPath = "";
@@ -516,25 +482,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		91DC082D28FC0C7E003885D1 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */ = {
+		529D014629ADD9F600284843 /* XCRemoteSwiftPackageReference "sendbird-live-uikit-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sendbird/sendbird-chat-sdk-ios";
-			requirement = {
-				kind = exactVersion;
-				version = 4.0.15;
-			};
-		};
-		91DC083328FC0CA7003885D1 /* XCRemoteSwiftPackageReference "calls-core-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sendbird/calls-core-ios";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		91DC083628FC0CB3003885D1 /* XCRemoteSwiftPackageReference "common-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sendbird/common-ios";
+			repositoryURL = "https://github.com/sendbird/sendbird-live-uikit-ios/";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -543,20 +493,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		91DC082E28FC0C7E003885D1 /* SendbirdChatSDK */ = {
+		529D014729ADD9F600284843 /* SendbirdLiveUIKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91DC082D28FC0C7E003885D1 /* XCRemoteSwiftPackageReference "sendbird-chat-sdk-ios" */;
-			productName = SendbirdChatSDK;
-		};
-		91DC083428FC0CA7003885D1 /* SendbirdCallsCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 91DC083328FC0CA7003885D1 /* XCRemoteSwiftPackageReference "calls-core-ios" */;
-			productName = SendbirdCallsCore;
-		};
-		91DC083728FC0CB3003885D1 /* SendbirdCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 91DC083628FC0CB3003885D1 /* XCRemoteSwiftPackageReference "common-ios" */;
-			productName = SendbirdCommon;
+			package = 529D014629ADD9F600284843 /* XCRemoteSwiftPackageReference "sendbird-live-uikit-ios" */;
+			productName = SendbirdLiveUIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
