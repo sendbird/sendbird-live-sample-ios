@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52FD164328BC868400918E8E /* QuickStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FD164328BC868400918E8E /* VideoLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FD164628BC868400918E8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FD164828BC868400918E8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52FD164A28BC868400918E8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		52FD163A28BC868400918E8E = {
 			isa = PBXGroup;
 			children = (
-				52FD164528BC868400918E8E /* QuickStart */,
+				52FD164528BC868400918E8E /* VideoLive */,
 				52FD164428BC868400918E8E /* Products */,
 				52FD165A28BC874F00918E8E /* Frameworks */,
 			);
@@ -84,12 +84,12 @@
 		52FD164428BC868400918E8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52FD164328BC868400918E8E /* QuickStart.app */,
+				52FD164328BC868400918E8E /* VideoLive.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52FD164528BC868400918E8E /* QuickStart */ = {
+		52FD164528BC868400918E8E /* VideoLive */ = {
 			isa = PBXGroup;
 			children = (
 				5FA0A5C128E69C3E00139F58 /* AppInfo */,
@@ -106,7 +106,7 @@
 				5FA0A5AA28E576F300139F58 /* UIImage+Extension.swift */,
 				5FA0A5B428E685DA00139F58 /* UIView+Extension.swift */,
 			);
-			path = QuickStart;
+			path = VideoLive;
 			sourceTree = "<group>";
 		};
 		52FD165A28BC874F00918E8E /* Frameworks */ = {
@@ -155,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52FD164228BC868400918E8E /* QuickStart */ = {
+		52FD164228BC868400918E8E /* VideoLive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52FD165728BC868500918E8E /* Build configuration list for PBXNativeTarget "QuickStart" */;
+			buildConfigurationList = 52FD165728BC868500918E8E /* Build configuration list for PBXNativeTarget "VideoLive" */;
 			buildPhases = (
 				52FD163F28BC868400918E8E /* Sources */,
 				52FD164028BC868400918E8E /* Frameworks */,
@@ -167,12 +167,12 @@
 			);
 			dependencies = (
 			);
-			name = QuickStart;
+			name = VideoLive;
 			packageProductDependencies = (
 				529D014729ADD9F600284843 /* SendbirdLiveUIKit */,
 			);
 			productName = QuickStart;
-			productReference = 52FD164328BC868400918E8E /* QuickStart.app */;
+			productReference = 52FD164328BC868400918E8E /* VideoLive.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52FD163E28BC868400918E8E /* Build configuration list for PBXProject "QuickStart" */;
+			buildConfigurationList = 52FD163E28BC868400918E8E /* Build configuration list for PBXProject "VideoLive" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52FD164228BC868400918E8E /* QuickStart */,
+				52FD164228BC868400918E8E /* VideoLive */,
 			);
 		};
 /* End PBXProject section */
@@ -396,8 +396,8 @@
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = QuickStart/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sendbird Live";
+				INFOPLIST_FILE = VideoLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sendbird Live Video Sample";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow media library usage";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow Camera usage";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow Microphone usage";
@@ -432,8 +432,8 @@
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = QuickStart/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sendbird Live";
+				INFOPLIST_FILE = VideoLive/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sendbird Live Video Sample";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Please allow media library usage";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow Camera usage";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow Microphone usage";
@@ -461,7 +461,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52FD163E28BC868400918E8E /* Build configuration list for PBXProject "QuickStart" */ = {
+		52FD163E28BC868400918E8E /* Build configuration list for PBXProject "VideoLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52FD165528BC868500918E8E /* Debug */,
@@ -470,7 +470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52FD165728BC868500918E8E /* Build configuration list for PBXNativeTarget "QuickStart" */ = {
+		52FD165728BC868500918E8E /* Build configuration list for PBXNativeTarget "VideoLive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52FD165828BC868500918E8E /* Debug */,

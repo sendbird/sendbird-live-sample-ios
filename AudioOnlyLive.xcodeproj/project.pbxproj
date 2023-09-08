@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		527D59782AA4DEBD0078A6AD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D59772AA4DEBD0078A6AD /* PaddingLabel.swift */; };
+		527D597A2AA4DED40078A6AD /* LiveEventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527D59792AA4DED40078A6AD /* LiveEventListCell.swift */; };
+		528B12012AA99A9C00E4318D /* SendbirdLiveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 528B12002AA99A9C00E4318D /* SendbirdLiveSDK */; };
+		528B12042AA99AD900E4318D /* SendbirdUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 528B12032AA99AD900E4318D /* SendbirdUIKit */; };
+		52C521FC2A9B717D00F8366D /* LiveEventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C521FB2A9B717D00F8366D /* LiveEventHeader.swift */; };
+		52CD2F242A930C200029946A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F232A930C200029946A /* AppDelegate.swift */; };
+		52CD2F262A930C200029946A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F252A930C200029946A /* SceneDelegate.swift */; };
+		52CD2F2B2A930C200029946A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD2F292A930C200029946A /* Main.storyboard */; };
+		52CD2F2D2A930C210029946A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CD2F2C2A930C210029946A /* Assets.xcassets */; };
+		52CD2F302A930C210029946A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD2F2E2A930C210029946A /* LaunchScreen.storyboard */; };
+		52CD2F3B2A930CEF0029946A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F3A2A930CEF0029946A /* SignInViewController.swift */; };
+		52CD2F3D2A930D0B0029946A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F3C2A930D0B0029946A /* SettingsViewController.swift */; };
+		52CD2F462A9347030029946A /* LiveEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F422A93403F0029946A /* LiveEventListViewController.swift */; };
+		52CD2F4A2A9347C80029946A /* UIImage+AudioOnlyLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F492A9347C80029946A /* UIImage+AudioOnlyLive.swift */; };
+		52CD2F6C2A93590B0029946A /* LiveEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F622A9358950029946A /* LiveEventViewController.swift */; };
+		52CD2F6D2A93591F0029946A /* HostLiveEventMediaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F5F2A9358950029946A /* HostLiveEventMediaComponent.swift */; };
+		52CD2F6E2A9359230029946A /* LiveEventMediaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F602A9358950029946A /* LiveEventMediaComponent.swift */; };
+		52CD2F6F2A9359250029946A /* LiveEventSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F642A9358950029946A /* LiveEventSummaryViewController.swift */; };
+		52CD2F702A9359270029946A /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F652A9358950029946A /* HostViewController.swift */; };
+		52CD2F712A93592B0029946A /* LiveEventSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F672A9358950029946A /* LiveEventSettingsViewController.swift */; };
+		52CD2F722A93592B0029946A /* ParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F6A2A9358950029946A /* ParticipantViewController.swift */; };
+		52CD2F732A93592B0029946A /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F682A9358950029946A /* HostListViewController.swift */; };
+		52CD2F752A935A400029946A /* ReactionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD2F742A935A400029946A /* ReactionAnimator.swift */; };
+		52F1F01B2AA70AFA00541646 /* SBLEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F01A2AA70AFA00541646 /* SBLEmptyView.swift */; };
+		52F1F01D2AA70B6800541646 /* String+AudioOnlyLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F01C2AA70B6800541646 /* String+AudioOnlyLive.swift */; };
+		52F1F01F2AA70B9F00541646 /* UIViewController+AudioOnlyLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F01E2AA70B9F00541646 /* UIViewController+AudioOnlyLive.swift */; };
+		52F1F0212AA70BC900541646 /* Int64+AudioOnlyLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F0202AA70BC900541646 /* Int64+AudioOnlyLive.swift */; };
+		52F1F0232AA70BD800541646 /* UIButton+AudioOnlyLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F0222AA70BD800541646 /* UIButton+AudioOnlyLive.swift */; };
+		52F1F0262AA70C1600541646 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F1F0252AA70C1600541646 /* PermissionManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		527D59772AA4DEBD0078A6AD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		527D59792AA4DED40078A6AD /* LiveEventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventListCell.swift; sourceTree = "<group>"; };
+		52C521FB2A9B717D00F8366D /* LiveEventHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventHeader.swift; sourceTree = "<group>"; };
+		52CD2F202A930C200029946A /* AudioOnlyLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioOnlyLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CD2F232A930C200029946A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52CD2F252A930C200029946A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52CD2F2A2A930C200029946A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52CD2F2C2A930C210029946A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CD2F2F2A930C210029946A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52CD2F312A930C210029946A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CD2F3A2A930CEF0029946A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		52CD2F3C2A930D0B0029946A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		52CD2F422A93403F0029946A /* LiveEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventListViewController.swift; sourceTree = "<group>"; };
+		52CD2F492A9347C80029946A /* UIImage+AudioOnlyLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AudioOnlyLive.swift"; sourceTree = "<group>"; };
+		52CD2F5F2A9358950029946A /* HostLiveEventMediaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostLiveEventMediaComponent.swift; sourceTree = "<group>"; };
+		52CD2F602A9358950029946A /* LiveEventMediaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventMediaComponent.swift; sourceTree = "<group>"; };
+		52CD2F622A9358950029946A /* LiveEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventViewController.swift; sourceTree = "<group>"; };
+		52CD2F642A9358950029946A /* LiveEventSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventSummaryViewController.swift; sourceTree = "<group>"; };
+		52CD2F652A9358950029946A /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		52CD2F672A9358950029946A /* LiveEventSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventSettingsViewController.swift; sourceTree = "<group>"; };
+		52CD2F682A9358950029946A /* HostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
+		52CD2F6A2A9358950029946A /* ParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantViewController.swift; sourceTree = "<group>"; };
+		52CD2F742A935A400029946A /* ReactionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionAnimator.swift; sourceTree = "<group>"; };
+		52F1F01A2AA70AFA00541646 /* SBLEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBLEmptyView.swift; sourceTree = "<group>"; };
+		52F1F01C2AA70B6800541646 /* String+AudioOnlyLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AudioOnlyLive.swift"; sourceTree = "<group>"; };
+		52F1F01E2AA70B9F00541646 /* UIViewController+AudioOnlyLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AudioOnlyLive.swift"; sourceTree = "<group>"; };
+		52F1F0202AA70BC900541646 /* Int64+AudioOnlyLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int64+AudioOnlyLive.swift"; sourceTree = "<group>"; };
+		52F1F0222AA70BD800541646 /* UIButton+AudioOnlyLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AudioOnlyLive.swift"; sourceTree = "<group>"; };
+		52F1F0252AA70C1600541646 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52CD2F1D2A930C200029946A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528B12012AA99A9C00E4318D /* SendbirdLiveSDK in Frameworks */,
+				528B12042AA99AD900E4318D /* SendbirdUIKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52CD2F172A930C200029946A = {
+			isa = PBXGroup;
+			children = (
+				52CD2F222A930C200029946A /* AudioOnlyLive */,
+				52CD2F212A930C200029946A /* Products */,
+				B1C860BA39F3D746342FA1C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52CD2F212A930C200029946A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F202A930C200029946A /* AudioOnlyLive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52CD2F222A930C200029946A /* AudioOnlyLive */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F232A930C200029946A /* AppDelegate.swift */,
+				52CD2F252A930C200029946A /* SceneDelegate.swift */,
+				52CD2F372A930CBD0029946A /* SignIn */,
+				52CD2F382A930CC30029946A /* LiveEventList */,
+				52CD2F392A930CCF0029946A /* LiveEvent */,
+				52CD2F482A9347BD0029946A /* Extensions */,
+				52CD2F292A930C200029946A /* Main.storyboard */,
+				52CD2F2C2A930C210029946A /* Assets.xcassets */,
+				52CD2F2E2A930C210029946A /* LaunchScreen.storyboard */,
+				52CD2F312A930C210029946A /* Info.plist */,
+			);
+			path = AudioOnlyLive;
+			sourceTree = "<group>";
+		};
+		52CD2F372A930CBD0029946A /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F3A2A930CEF0029946A /* SignInViewController.swift */,
+				52CD2F3C2A930D0B0029946A /* SettingsViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		52CD2F382A930CC30029946A /* LiveEventList */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F422A93403F0029946A /* LiveEventListViewController.swift */,
+				527D59792AA4DED40078A6AD /* LiveEventListCell.swift */,
+			);
+			path = LiveEventList;
+			sourceTree = "<group>";
+		};
+		52CD2F392A930CCF0029946A /* LiveEvent */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F5E2A9358950029946A /* MediaComponent */,
+				52CD2F612A9358950029946A /* ViewController */,
+				52C521FB2A9B717D00F8366D /* LiveEventHeader.swift */,
+			);
+			path = LiveEvent;
+			sourceTree = "<group>";
+		};
+		52CD2F482A9347BD0029946A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F492A9347C80029946A /* UIImage+AudioOnlyLive.swift */,
+				527D59772AA4DEBD0078A6AD /* PaddingLabel.swift */,
+				52F1F0202AA70BC900541646 /* Int64+AudioOnlyLive.swift */,
+				52F1F01E2AA70B9F00541646 /* UIViewController+AudioOnlyLive.swift */,
+				52F1F01C2AA70B6800541646 /* String+AudioOnlyLive.swift */,
+				52F1F0252AA70C1600541646 /* PermissionManager.swift */,
+				52F1F01A2AA70AFA00541646 /* SBLEmptyView.swift */,
+				52F1F0222AA70BD800541646 /* UIButton+AudioOnlyLive.swift */,
+				52CD2F742A935A400029946A /* ReactionAnimator.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52CD2F5E2A9358950029946A /* MediaComponent */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F5F2A9358950029946A /* HostLiveEventMediaComponent.swift */,
+				52CD2F602A9358950029946A /* LiveEventMediaComponent.swift */,
+			);
+			path = MediaComponent;
+			sourceTree = "<group>";
+		};
+		52CD2F612A9358950029946A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F622A9358950029946A /* LiveEventViewController.swift */,
+				52CD2F632A9358950029946A /* Host */,
+				52CD2F692A9358950029946A /* Participant */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		52CD2F632A9358950029946A /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F642A9358950029946A /* LiveEventSummaryViewController.swift */,
+				52CD2F652A9358950029946A /* HostViewController.swift */,
+				52CD2F672A9358950029946A /* LiveEventSettingsViewController.swift */,
+				52CD2F682A9358950029946A /* HostListViewController.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		52CD2F692A9358950029946A /* Participant */ = {
+			isa = PBXGroup;
+			children = (
+				52CD2F6A2A9358950029946A /* ParticipantViewController.swift */,
+			);
+			path = Participant;
+			sourceTree = "<group>";
+		};
+		B1C860BA39F3D746342FA1C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52CD2F1F2A930C200029946A /* AudioOnlyLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CD2F342A930C210029946A /* Build configuration list for PBXNativeTarget "AudioOnlyLive" */;
+			buildPhases = (
+				52CD2F1C2A930C200029946A /* Sources */,
+				52CD2F1D2A930C200029946A /* Frameworks */,
+				52CD2F1E2A930C200029946A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioOnlyLive;
+			packageProductDependencies = (
+				528B12002AA99A9C00E4318D /* SendbirdLiveSDK */,
+				528B12032AA99AD900E4318D /* SendbirdUIKit */,
+			);
+			productName = AudioOnlyLive;
+			productReference = 52CD2F202A930C200029946A /* AudioOnlyLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52CD2F182A930C200029946A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					52CD2F1F2A930C200029946A = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 52CD2F1B2A930C200029946A /* Build configuration list for PBXProject "AudioOnlyLive" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52CD2F172A930C200029946A;
+			packageReferences = (
+				528B11FF2AA99A9C00E4318D /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */,
+				528B12022AA99AD900E4318D /* XCRemoteSwiftPackageReference "Sendbird-uikit-ios" */,
+			);
+			productRefGroup = 52CD2F212A930C200029946A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52CD2F1F2A930C200029946A /* AudioOnlyLive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52CD2F1E2A930C200029946A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CD2F302A930C210029946A /* LaunchScreen.storyboard in Resources */,
+				52CD2F2D2A930C210029946A /* Assets.xcassets in Resources */,
+				52CD2F2B2A930C200029946A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52CD2F1C2A930C200029946A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CD2F702A9359270029946A /* HostViewController.swift in Sources */,
+				52CD2F6E2A9359230029946A /* LiveEventMediaComponent.swift in Sources */,
+				527D597A2AA4DED40078A6AD /* LiveEventListCell.swift in Sources */,
+				52CD2F3B2A930CEF0029946A /* SignInViewController.swift in Sources */,
+				52CD2F4A2A9347C80029946A /* UIImage+AudioOnlyLive.swift in Sources */,
+				52CD2F462A9347030029946A /* LiveEventListViewController.swift in Sources */,
+				52CD2F722A93592B0029946A /* ParticipantViewController.swift in Sources */,
+				52F1F01B2AA70AFA00541646 /* SBLEmptyView.swift in Sources */,
+				52F1F0212AA70BC900541646 /* Int64+AudioOnlyLive.swift in Sources */,
+				52CD2F752A935A400029946A /* ReactionAnimator.swift in Sources */,
+				52C521FC2A9B717D00F8366D /* LiveEventHeader.swift in Sources */,
+				52CD2F242A930C200029946A /* AppDelegate.swift in Sources */,
+				52F1F01F2AA70B9F00541646 /* UIViewController+AudioOnlyLive.swift in Sources */,
+				52F1F01D2AA70B6800541646 /* String+AudioOnlyLive.swift in Sources */,
+				52F1F0262AA70C1600541646 /* PermissionManager.swift in Sources */,
+				52CD2F3D2A930D0B0029946A /* SettingsViewController.swift in Sources */,
+				52CD2F6D2A93591F0029946A /* HostLiveEventMediaComponent.swift in Sources */,
+				527D59782AA4DEBD0078A6AD /* PaddingLabel.swift in Sources */,
+				52CD2F732A93592B0029946A /* HostListViewController.swift in Sources */,
+				52CD2F262A930C200029946A /* SceneDelegate.swift in Sources */,
+				52CD2F6F2A9359250029946A /* LiveEventSummaryViewController.swift in Sources */,
+				52F1F0232AA70BD800541646 /* UIButton+AudioOnlyLive.swift in Sources */,
+				52CD2F712A93592B0029946A /* LiveEventSettingsViewController.swift in Sources */,
+				52CD2F6C2A93590B0029946A /* LiveEventViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52CD2F292A930C200029946A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52CD2F2A2A930C200029946A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52CD2F2E2A930C210029946A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52CD2F2F2A930C210029946A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52CD2F322A930C210029946A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52CD2F332A930C210029946A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52CD2F352A930C210029946A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 29;
+				DEVELOPMENT_TEAM = RM4A5PXTUX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioOnlyLive/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.live.audio.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		52CD2F362A930C210029946A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 29;
+				DEVELOPMENT_TEAM = RM4A5PXTUX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioOnlyLive/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow microphone usage to stream with your microphone. ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.live.audio.sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52CD2F1B2A930C200029946A /* Build configuration list for PBXProject "AudioOnlyLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CD2F322A930C210029946A /* Debug */,
+				52CD2F332A930C210029946A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CD2F342A930C210029946A /* Build configuration list for PBXNativeTarget "AudioOnlyLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CD2F352A930C210029946A /* Debug */,
+				52CD2F362A930C210029946A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		528B11FF2AA99A9C00E4318D /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-live-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		528B12022AA99AD900E4318D /* XCRemoteSwiftPackageReference "Sendbird-uikit-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/sendbird/Sendbird-uikit-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		528B12002AA99A9C00E4318D /* SendbirdLiveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 528B11FF2AA99A9C00E4318D /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */;
+			productName = SendbirdLiveSDK;
+		};
+		528B12032AA99AD900E4318D /* SendbirdUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 528B12022AA99AD900E4318D /* XCRemoteSwiftPackageReference "Sendbird-uikit-ios" */;
+			productName = SendbirdUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 52CD2F182A930C200029946A /* Project object */;
+}
