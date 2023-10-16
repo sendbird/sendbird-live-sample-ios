@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52FD164228BC868400918E8E"
-               BuildableName = "VideoLive.app"
-               BlueprintName = "VideoLive"
-               ReferencedContainer = "container:VideoLive.xcodeproj">
+               BuildableName = "VideoLiveUIKit.app"
+               BlueprintName = "VideoLiveUIKit"
+               ReferencedContainer = "container:VideoLiveUIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52FD164228BC868400918E8E"
-            BuildableName = "VideoLive.app"
-            BlueprintName = "VideoLive"
-            ReferencedContainer = "container:VideoLive.xcodeproj">
+            BuildableName = "VideoLiveUIKit.app"
+            BlueprintName = "VideoLiveUIKit"
+            ReferencedContainer = "container:VideoLiveUIKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52FD164228BC868400918E8E"
-            BuildableName = "VideoLive.app"
-            BlueprintName = "VideoLive"
-            ReferencedContainer = "container:VideoLive.xcodeproj">
+            BuildableName = "VideoLiveUIKit.app"
+            BlueprintName = "VideoLiveUIKit"
+            ReferencedContainer = "container:VideoLiveUIKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
