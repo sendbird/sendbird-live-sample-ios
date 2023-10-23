@@ -74,17 +74,16 @@
                                     <constraint firstAttribute="height" constant="20" id="rKf-qj-JJT"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxu-pL-ogi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxu-pL-ogi">
                                 <rect key="frame" x="24" y="516" width="345" height="48"/>
                                 <color key="backgroundColor" red="0.45490196078431372" green="0.1764705882352941" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Huw-pT-Hd1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
@@ -196,13 +195,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq6-Vm-FzA">
-                                                    <rect key="frame" x="88" y="9.9999999999999982" width="112.66666666666669" height="19.333333333333329"/>
+                                                    <rect key="frame" x="88" y="11.999999999999998" width="112.66666666666669" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.88" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBs-D9-dTb" customClass="PaddingLabel" customModule="AudioOnlyLive" customModuleProvider="target">
-                                                    <rect key="frame" x="88" y="33.333333333333336" width="39.666666666666657" height="20"/>
+                                                    <rect key="frame" x="88" y="35.333333333333336" width="39.666666666666657" height="20"/>
                                                     <color key="backgroundColor" red="0.4549019608" green="0.1764705882" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="QdQ-Cp-fvG"/>
@@ -229,7 +228,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participant Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTN-Eg-1Cr">
-                                                    <rect key="frame" x="135.66666666666666" y="36.333333333333336" width="112.33333333333334" height="17"/>
+                                                    <rect key="frame" x="135.66666666666666" y="38.333333333333336" width="112.33333333333334" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -244,7 +243,7 @@
                                                 <constraint firstItem="oTN-Eg-1Cr" firstAttribute="leading" secondItem="gBs-D9-dTb" secondAttribute="trailing" constant="8" id="bca-pP-iSA"/>
                                                 <constraint firstItem="Gq6-Vm-FzA" firstAttribute="leading" secondItem="gUX-LL-ii4" secondAttribute="trailing" constant="16" id="hC0-qs-nWZ"/>
                                                 <constraint firstItem="gBs-D9-dTb" firstAttribute="top" secondItem="Gq6-Vm-FzA" secondAttribute="bottom" constant="4" id="x2o-9o-Jsw"/>
-                                                <constraint firstItem="Gq6-Vm-FzA" firstAttribute="top" secondItem="VPt-0m-LVV" secondAttribute="top" constant="10" id="yrN-DK-b1Z"/>
+                                                <constraint firstItem="Gq6-Vm-FzA" firstAttribute="top" secondItem="VPt-0m-LVV" secondAttribute="top" constant="12" id="yrN-DK-b1Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="88" minY="0.0" maxX="0.0" maxY="0.0"/>

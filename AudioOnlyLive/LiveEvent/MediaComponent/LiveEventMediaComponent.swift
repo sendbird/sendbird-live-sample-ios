@@ -43,7 +43,7 @@ class LiveEventMediaComponent: SBUOpenChannelModule.Media {
     lazy var liveBackground: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "liveBackground")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.isHidden = true
         return imageView
     }()
@@ -138,10 +138,10 @@ class LiveEventMediaComponent: SBUOpenChannelModule.Media {
         self.activeIndicator.layer.cornerRadius = 10 / 2
         self.activeIndicator.clipsToBounds = true
         
-        self.liveLabel.font = SBUFontSet.body3
+        self.liveLabel.font = SBUFontSet.body2
         self.liveLabel.textColor = SBUColorSet.ondark01
         
-        self.participantCountLabel.font = SBUFontSet.body2
+        self.participantCountLabel.font = SBUFontSet.body3
         self.participantCountLabel.textColor = SBUColorSet.ondark01
         
         self.statusButton.setContentInset(top: 8, leading: 12, bottom: 8, trailing: 12)
@@ -206,8 +206,12 @@ class LiveEventMediaComponent: SBUOpenChannelModule.Media {
     func enableOverlayViewConstraint(_ isEnabled: Bool) {
         DispatchQueue.main.async {
             self.overlayStackView.layoutSubviews()
-            self.coverImageView.layer.cornerRadius = self.coverImageView.frame.width / 2
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.coverImageView.layer.cornerRadius = self.coverImageView.frame.width / 2
     }
     
     func startDurationTimer() {
