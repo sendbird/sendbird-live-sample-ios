@@ -299,12 +299,14 @@ open class LiveEventViewController: SBUOpenChannelViewController, LiveEventDeleg
         if let headerView = (headerComponent?.channelInfoView as? SBUChannelInfoHeaderView) {
             self.channelDescription = liveEvent.host == nil ? "—" : liveEvent.host?.nickname?.trimmed.collapsed ?? "Host"
             headerView.titleLabel.text = liveEvent.title?.trimmed.collapsed ?? "Live Event"
-            headerView.descriptionLabel.text = self.channelDescription
+//            headerView.descriptionLabel.text = self.channelDescription
             
             if let coverURL = self.liveEvent.coverURL {
                 headerView.coverImage.setImage(with: coverURL)
+                headerView.coverImage.contentMode = .scaleAspectFill
             } else {
                 headerView.coverImage.setImage(withImage: SBUIconSet.iconUser.resize(with: CGSize(width: 27, height: 27)).sbu_with(tintColor: SBUColorSet.onlight01))
+                headerView.coverImage.contentMode = .center
             }
         }
         

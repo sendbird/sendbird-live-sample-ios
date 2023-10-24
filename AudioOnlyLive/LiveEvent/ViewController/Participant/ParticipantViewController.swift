@@ -37,7 +37,7 @@ public class ParticipantViewController: LiveEventViewController {
         updateBannerText()
         
         let iconImage = SBUIconSet.iconMembers.sbu_with(tintColor: SBUColorSet.ondark01).resize(with: CGSize(width: 24, height: 24))
-        (self.headerComponent?.channelInfoView as? SBUChannelInfoHeaderView)?.infoButton?.setImage(iconImage, for: .normal)
+        (self.headerComponent?.channelInfoView as? SBUChannelInfoHeaderView)?.infoButton?.setImage(iconImage.sbu_with(tintColor: SBUColorSet.ondark01), for: .normal)
     }
     
     open func updateBannerText() {

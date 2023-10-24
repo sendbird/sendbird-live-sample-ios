@@ -151,8 +151,8 @@ class LiveEventSummaryViewController: SBUBaseViewController, UITableViewDelegate
             self.coverImageView.loadImage(urlString: coverURL)
             self.coverImageView.contentMode = .scaleAspectFill
         } else {
-            self.coverImageView.image = SBUIconSet.iconUser.resize(with: CGSize(width: 27, height: 27)).sbu_with(tintColor: SBUColorSet.onlight01)
-            self.coverImageView.backgroundColor = SBUColorSet.background200
+            self.coverImageView.image = SBUIconSet.iconUser.resize(with: CGSize(width: 27, height: 27)).sbu_with(tintColor: SBUColorSet.ondark01)
+            self.coverImageView.backgroundColor = SBUColorSet.background300
             self.coverImageView.contentMode = .center
         }
         

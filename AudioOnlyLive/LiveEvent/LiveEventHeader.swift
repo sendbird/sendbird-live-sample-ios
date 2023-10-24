@@ -78,6 +78,8 @@ class LiveEventHeader: SBUChannelInfoHeaderView {
             NSLayoutConstraint.deactivate(infoButton.constraints)
             infoButton.removeFromSuperview()
             infoButton.sbu_constraint(width: 24, height: 24)
+            infoButton.tintColor = SBUColorSet.ondark01
+            infoButton.setImage(SBUIconSet.iconInfo.sbu_with(tintColor: SBUColorSet.ondark01), for: .normal)
             self.channelInfoHStack.insertArrangedSubview(infoButton, at: 0)
         }
         
@@ -92,5 +94,11 @@ class LiveEventHeader: SBUChannelInfoHeaderView {
         self.reactionButton
             .sbu_constraint(width: 24,
                             height: 24)
+    }
+    
+    override func setupStyles() {
+        super.setupStyles()
+        self.coverImage.backgroundColor = SBUColorSet.background300
+        self.infoButton?.tintColor = SBUColorSet.ondark01
     }
 }

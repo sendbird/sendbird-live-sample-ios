@@ -46,7 +46,7 @@ class SignInViewController: UIViewController {
         SBUGlobals.accessToken = accessToken
         SBUGlobals.applicationId = appId
         SBUTheme.set(theme: .dark)
-
+        
         self.signInButton.isEnabled = false
 
         // Update app ID
@@ -56,6 +56,8 @@ class SignInViewController: UIViewController {
             SendbirdLive.authenticate(userId: userId) { result in
                 SendbirdUI.connect { user, error in
                     DispatchQueue.main.async {
+                        self.signInButton.isEnabled = true
+
                         switch result {
                         case .success:
                             UserDefaults.standard.set(userId, forKey: "userId")
@@ -64,8 +66,6 @@ class SignInViewController: UIViewController {
                             self.performSegue(withIdentifier: "login", sender: nil)
                             
                         case .failure(let error):
-                            self.signInButton.isEnabled = true
-
                             self.presentErrorAlert(message: error.localizedDescription)
                         }
                     }
