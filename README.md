@@ -6,13 +6,16 @@
 
 This repository provides a working sample of Live Event Streaming using Sendbird Live SDK.
 
-In this repository, you can find implementation guide for `singleHost` tand `singleHostAudioOnly` live event types.
+In this repository, you can find implementation guide for `audio` and `video` live event types.
 
 ### Video Live
 To see the video live event sample, open the `VideoLive.xcodeproj` file. 
 
 ### Audio Live  
-To see the audio-only live event sample, open the `AudioOnlyLive.xcodeproj` file. 
+To see the audio-only live event sample, open the `AudioOnlyLive.xcodeproj` file.
+
+### Video Live with UIKit  
+To see the audio-only live event sample, open the `VideoLiveUIKit.xcodeproj` file. 
 
 --- 
 
