@@ -12,10 +12,10 @@
     {
       "identity" : "sendbird-live-sdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sendbird/sendbird-live-sdk-ios",
+      "location" : "https://github.com/sendbird/sendbird-live-sdk-ios/",
       "state" : {
-        "revision" : "e52df2d4b0a41ffa88a5fd58ca58bc5f4ef280f1",
-        "version" : "1.2.0-beta.1"
+        "revision" : "1001447209e24d2dff69aea0489b965d58a5cda7",
+        "version" : "1.2.1"
       }
     },
     {
