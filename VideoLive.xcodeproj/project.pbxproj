@@ -428,7 +428,7 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MultiHost/Info.plist;
+				INFOPLIST_FILE = VideoLive/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera usage";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow microphone usage";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow photo library usage";
@@ -464,7 +464,7 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MultiHost/Info.plist;
+				INFOPLIST_FILE = VideoLive/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow camera usage";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow microphone usage";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow photo library usage";
