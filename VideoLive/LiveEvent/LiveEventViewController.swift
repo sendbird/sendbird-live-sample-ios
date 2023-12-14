@@ -10,12 +10,10 @@ import SendbirdLiveSDK
 import SendbirdUIKit
 import AVKit
 
-class LiveEventViewControllers: UIViewController {
+class LiveEventViewController: UIViewController {
     var liveEvent: LiveEvent!
 
     @IBOutlet var mediaControlView: UIView!
-
-    @IBOutlet var participantLabelConstraint: NSLayoutConstraint!
 
     @objc func toggleTranslucent(gesture: UITapGestureRecognizer) {
         mediaControlView.isHidden.toggle()
@@ -94,48 +92,47 @@ class LiveEventViewControllers: UIViewController {
     func updateLiveEventInfo() {
         if let coverURL = liveEvent.coverURL {
             coverImageView.loadImage(urlString: coverURL)
+            coverImageView.contentMode = .scaleAspectFill
         } else {
             coverImageView.image = SBUIconSet.iconUser.resize(with: CGSize(width: 20, height: 20)).sbu_with(tintColor: SBUColorSet.onlight01)
+            coverImageView.contentMode = .center
         }
         titleLabel.text = liveEvent.title ?? "Live Event"
         hostLabel.text = Array(liveEvent.hosts.map(\.userId)).joined(separator: ", ")
-
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        liveEvent.addDelegate(self, forKey: "SDFdsf")
-
+        liveEvent.addDelegate(self, forKey: "LiveEventViewController")
+        
         collectionView.register(UINib(nibName: "HostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "host")
-
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        
         if !liveEvent.isActiveHost {
             audioDeviceButton.isHidden = true
             cameraFlipButton.isHidden = true
             micButton.isHidden = true
             cameraButton.isHidden = true
-            statusButton.isHidden = true
-            participantLabelConstraint.isActive = true
         }
-
+        
         let routePickerView = AVRoutePickerView(frame: CGRect(x: 0, y: 0, width: audioDeviceButton.frame.width, height: audioDeviceButton.frame.height))
         routePickerView.delegate = self
         routePickerView.activeTintColor = .clear
         routePickerView.tintColor = .clear
         audioDeviceButton.addSubview(routePickerView)
-
+        
         if liveEvent.state == .ongoing {
             startDurationTimer()
         } else {
             updateStatusButton()
         }
-
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(toggleTranslucent))
         tap.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap)
-
+        
         updateLiveEventInfo()
     }
 
@@ -212,9 +209,13 @@ class LiveEventViewControllers: UIViewController {
 
     @objc func updateStatusButton() {
         guard let liveEvent = liveEvent else { return }
-
+        
         switch liveEvent.state {
         case .created, .ready:
+            if !liveEvent.isActiveHost {
+                statusButton.setTitle("00:00", for: .normal)
+                statusButton.isEnabled = false
+            }
             break
         case .ongoing:
             statusButton.setTitle(liveEvent.duration.durationText(), for: .normal)
@@ -227,7 +228,7 @@ class LiveEventViewControllers: UIViewController {
     }
 }
 
-extension LiveEventViewControllers: LiveEventDelegate {
+extension LiveEventViewController: LiveEventDelegate {
     func updateHostCell(for hostId: String) {
         guard let index = liveEvent.hosts.firstIndex(where: { $0.hostId == hostId }) else { return }
         UIView.performWithoutAnimation {
@@ -238,6 +239,9 @@ extension LiveEventViewControllers: LiveEventDelegate {
 
     func didHostMuteAudioInput(_ liveEvent: SendbirdLiveSDK.LiveEvent, host: SendbirdLiveSDK.Host) {
         updateHostCell(for: host.hostId)
+    }
+    func didHostVideoResolutionChange(_ liveEvent: LiveEvent, host: Host, resolution: Resolution) {
+        print("Host changed: \(host.userId) and \(resolution.width) and \(resolution.height)")
     }
 
     func didHostUnmuteAudioInput(_ liveEvent: SendbirdLiveSDK.LiveEvent, host: SendbirdLiveSDK.Host) {
@@ -287,16 +291,22 @@ extension LiveEventViewControllers: LiveEventDelegate {
 
     func didLiveEventEnd(_ liveEvent: SendbirdLiveSDK.LiveEvent) {
         guard liveEvent.endedBy != SendbirdLive.currentUser?.userId else { return }
+        
         self.updateLiveEventInfo()
-        SBUAlertView.show(
-            title: "Live Event has ended",
-            confirmButtonItem: .init(title: "Okay", completionHandler: { _ in
-                DispatchQueue.main.async {
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }),
-            cancelButtonItem: nil
-        )
+        if liveEvent.myRole == .host {
+            let summaryVC = LiveEventSummaryViewController(liveEvent: self.liveEvent)
+            self.navigationController?.pushViewController(summaryVC, animated: false)
+        } else {
+            SBUAlertView.show(
+                title: "Live Event has ended",
+                confirmButtonItem: .init(title: "Okay", completionHandler: { _ in
+                    DispatchQueue.main.async {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }),
+                cancelButtonItem: nil
+            )
+        }
     }
 
     func didLiveEventInfoUpdate(_ liveEvent: SendbirdLiveSDK.LiveEvent) {
@@ -336,13 +346,13 @@ extension LiveEventViewControllers: LiveEventDelegate {
     }
 }
 
-extension LiveEventViewControllers: AVRoutePickerViewDelegate {
+extension LiveEventViewController: AVRoutePickerViewDelegate {
     func routePickerViewDidEndPresentingRoutes(_ routePickerView: AVRoutePickerView) {
         self.liveEvent?.resetCamera()
     }
 }
 
-extension LiveEventViewControllers: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension LiveEventViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return liveEvent.hosts.count
     }

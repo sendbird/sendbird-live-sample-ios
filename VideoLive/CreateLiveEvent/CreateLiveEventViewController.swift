@@ -28,6 +28,7 @@ class CreateLiveEventViewController: UIViewController, UINavigationControllerDel
         }
     }
 
+    @IBOutlet var audioOnlySwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,7 +87,7 @@ class CreateLiveEventViewController: UIViewController, UINavigationControllerDel
         self.rightBarButton?.isEnabled = false
 
         let configuration = LiveEvent.CreateParams(
-            type: .video,
+            type: audioOnlySwitch.isOn ? .audioOnly : .video,
             title: titleTextField.text?.isEmpty == true ? nil : titleTextField.text,
             coverFile: coverImageView.image?.jpegData(compressionQuality: 0.8),
             userIdsForHost: Array(selectedUserIds),

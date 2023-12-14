@@ -28,11 +28,11 @@
 		523A94BF2AC2BAA30079C4C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A94BA2AC2BAA30079C4C8 /* SettingsViewController.swift */; };
 		523A94C02AC2BAA30079C4C8 /* LiveEventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A94BC2AC2BAA30079C4C8 /* LiveEventListCell.swift */; };
 		523A94C12AC2BAA30079C4C8 /* LiveEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A94BD2AC2BAA30079C4C8 /* LiveEventListViewController.swift */; };
-		526B901A2AFB80620003DBFE /* SendbirdLiveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 526B90192AFB80620003DBFE /* SendbirdLiveSDK */; };
 		526B901D2AFB808E0003DBFE /* SendbirdUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 526B901C2AFB808E0003DBFE /* SendbirdUIKit */; };
+		52791A6B2B2AD68B0032FFED /* SendbirdLiveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 52791A6A2B2AD68B0032FFED /* SendbirdLiveSDK */; };
 		5288D5CA2AD784D000BDE705 /* HostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288D5C92AD784D000BDE705 /* HostCollectionViewCell.swift */; };
 		5288D5CC2AD784DD00BDE705 /* HostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5288D5CB2AD784DD00BDE705 /* HostCollectionViewCell.xib */; };
-		52E586CE2AC2C189002A1A20 /* LiveEventViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E586CD2AC2C189002A1A20 /* LiveEventViewControllers.swift */; };
+		52E586CE2AC2C189002A1A20 /* LiveEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E586CD2AC2C189002A1A20 /* LiveEventViewController.swift */; };
 		52E586D02AC2C354002A1A20 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E586CF2AC2C354002A1A20 /* FlowLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +60,13 @@
 		523A94BA2AC2BAA30079C4C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		523A94BC2AC2BAA30079C4C8 /* LiveEventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveEventListCell.swift; sourceTree = "<group>"; };
 		523A94BD2AC2BAA30079C4C8 /* LiveEventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveEventListViewController.swift; sourceTree = "<group>"; };
+		525C08C82AFCA15F00FD638E /* VideoLive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VideoLive.entitlements; sourceTree = "<group>"; };
+		5286E7082B01A2F00078DE3C /* SendbirdLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SendbirdLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5286E70C2B01A5160078DE3C /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = "/Users/minhyuk.kim/Desktop/Sendbird/Live/live-ios/../../Calls/WebRTC/signal-webrtc-ios/webrtc/src/out/WebRTC.xcframework"; sourceTree = "<absolute>"; };
 		5288D5C52AD4EAE300BDE705 /* SendbirdLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SendbirdLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5288D5C92AD784D000BDE705 /* HostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostCollectionViewCell.swift; sourceTree = "<group>"; };
 		5288D5CB2AD784DD00BDE705 /* HostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostCollectionViewCell.xib; sourceTree = "<group>"; };
-		52E586CD2AC2C189002A1A20 /* LiveEventViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventViewControllers.swift; sourceTree = "<group>"; };
+		52E586CD2AC2C189002A1A20 /* LiveEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventViewController.swift; sourceTree = "<group>"; };
 		52E586CF2AC2C354002A1A20 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526B901A2AFB80620003DBFE /* SendbirdLiveSDK in Frameworks */,
+				52791A6B2B2AD68B0032FFED /* SendbirdLiveSDK in Frameworks */,
 				526B901D2AFB808E0003DBFE /* SendbirdUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +103,7 @@
 		523A94752ABA8F540079C4C8 /* VideoLive */ = {
 			isa = PBXGroup;
 			children = (
+				525C08C82AFCA15F00FD638E /* VideoLive.entitlements */,
 				523A94762ABA8F540079C4C8 /* AppDelegate.swift */,
 				523A94782ABA8F540079C4C8 /* SceneDelegate.swift */,
 				523A94B82AC2BAA30079C4C8 /* SignIn */,
@@ -135,7 +139,7 @@
 		523A94A12AC2BA9B0079C4C8 /* LiveEvent */ = {
 			isa = PBXGroup;
 			children = (
-				52E586CD2AC2C189002A1A20 /* LiveEventViewControllers.swift */,
+				52E586CD2AC2C189002A1A20 /* LiveEventViewController.swift */,
 				523A94A92AC2BA9B0079C4C8 /* LiveEventSummaryViewController.swift */,
 				5288D5C92AD784D000BDE705 /* HostCollectionViewCell.swift */,
 				5288D5CB2AD784DD00BDE705 /* HostCollectionViewCell.xib */,
@@ -173,6 +177,8 @@
 		EEA29718498C72A7FE434C02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5286E70C2B01A5160078DE3C /* WebRTC.xcframework */,
+				5286E7082B01A2F00078DE3C /* SendbirdLiveSDK.framework */,
 				5288D5C52AD4EAE300BDE705 /* SendbirdLiveSDK.framework */,
 			);
 			name = Frameworks;
@@ -195,8 +201,8 @@
 			);
 			name = VideoLive;
 			packageProductDependencies = (
-				526B90192AFB80620003DBFE /* SendbirdLiveSDK */,
 				526B901C2AFB808E0003DBFE /* SendbirdUIKit */,
+				52791A6A2B2AD68B0032FFED /* SendbirdLiveSDK */,
 			);
 			productName = MultiHost;
 			productReference = 523A94732ABA8F540079C4C8 /* VideoLive.app */;
@@ -227,8 +233,8 @@
 			);
 			mainGroup = 523A946A2ABA8F540079C4C8;
 			packageReferences = (
-				526B90182AFB80620003DBFE /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */,
 				526B901B2AFB808E0003DBFE /* XCRemoteSwiftPackageReference "sendbird-uikit-ios" */,
+				52791A692B2AD68B0032FFED /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */,
 			);
 			productRefGroup = 523A94742ABA8F540079C4C8 /* Products */;
 			projectDirPath = "";
@@ -262,7 +268,7 @@
 				523A949A2ABA8FB50079C4C8 /* SBLEmptyView.swift in Sources */,
 				523A94772ABA8F540079C4C8 /* AppDelegate.swift in Sources */,
 				523A94C12AC2BAA30079C4C8 /* LiveEventListViewController.swift in Sources */,
-				52E586CE2AC2C189002A1A20 /* LiveEventViewControllers.swift in Sources */,
+				52E586CE2AC2C189002A1A20 /* LiveEventViewController.swift in Sources */,
 				523A94952ABA8FB50079C4C8 /* PermissionManager.swift in Sources */,
 				52347BD22AD9047E00AC2D94 /* HostSelectionViewController.swift in Sources */,
 				523A94972ABA8FB50079C4C8 /* String+MultiHost.swift in Sources */,
@@ -423,9 +429,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoLive/VideoLive.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoLive/Info.plist;
@@ -459,9 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoLive/VideoLive.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = RM4A5PXTUX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoLive/Info.plist;
@@ -514,14 +522,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		526B90182AFB80620003DBFE /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sendbird/sendbird-live-sdk-ios";
-			requirement = {
-				kind = exactVersion;
-				version = "1.2.0-beta.1";
-			};
-		};
 		526B901B2AFB808E0003DBFE /* XCRemoteSwiftPackageReference "sendbird-uikit-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sendbird/sendbird-uikit-ios";
@@ -530,18 +530,26 @@
 				kind = branch;
 			};
 		};
+		52791A692B2AD68B0032FFED /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-live-sdk-ios/";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		526B90192AFB80620003DBFE /* SendbirdLiveSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 526B90182AFB80620003DBFE /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */;
-			productName = SendbirdLiveSDK;
-		};
 		526B901C2AFB808E0003DBFE /* SendbirdUIKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 526B901B2AFB808E0003DBFE /* XCRemoteSwiftPackageReference "sendbird-uikit-ios" */;
 			productName = SendbirdUIKit;
+		};
+		52791A6A2B2AD68B0032FFED /* SendbirdLiveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52791A692B2AD68B0032FFED /* XCRemoteSwiftPackageReference "sendbird-live-sdk-ios" */;
+			productName = SendbirdLiveSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

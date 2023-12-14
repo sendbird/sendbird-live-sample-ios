@@ -23,7 +23,9 @@ class HostCollectionViewCell: UICollectionViewCell {
             guard let host = host else { return }
 
             updateView(with: host)
-            registerVideoView(with: host)
+            if oldValue?.hostId != host.hostId {
+                registerVideoView(with: host)
+            }
         }
     }
 
@@ -45,9 +47,10 @@ class HostCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.async { [self] in
             videoView.subviews.forEach { $0.removeFromSuperview() }
 
-            let sendbirdVideoView = SendbirdVideoView(frame: videoView.frame, contentMode: .center)
+            videoView.contentMode = .scaleAspectFill
+            let sendbirdVideoView = SendbirdVideoView(frame: videoView.frame, contentMode: .scaleAspectFill)
             sendbirdVideoView.backgroundColor = UIColor(white: 44.0 / 255.0, alpha: 1.0)
-            videoView.embed(sendbirdVideoView)
+            sendbirdVideoView.embed(in: videoView)
 
             liveEvent.setVideoViewForLiveEvent(view: sendbirdVideoView, hostId: host.hostId)
         }

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/minhyuk.kim/Desktop/Sendbird/Live/sendbird-live-sample-ios/VideoLive.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

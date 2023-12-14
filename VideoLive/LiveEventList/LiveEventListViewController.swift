@@ -203,7 +203,7 @@ open class LiveEventListViewController: UIViewController, UITableViewDelegate, U
 
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "enterLiveEvent",
-           let destination =  segue.destination as? LiveEventViewControllers {
+           let destination =  segue.destination as? LiveEventViewController {
             destination.liveEvent = sender as? LiveEvent
         }
     }

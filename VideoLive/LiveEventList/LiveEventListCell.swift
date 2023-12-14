@@ -17,8 +17,11 @@ class LiveEventListCell: UITableViewCell {
 
     @IBOutlet var statusLabel: PaddingLabel!
 
-    @IBOutlet var participantCountLabel: UILabel!
+    @IBOutlet var hostListLabel: UILabel!
 
+    @IBOutlet var liveActiveIndicator: UIView!
+    @IBOutlet var participantCountLabel: UILabel!
+    
     public func configure(liveEvent: LiveEvent) {
         if let coverURL = liveEvent.coverURL, !coverURL.isEmpty {
             self.coverImage.loadImage(urlString: coverURL) { success in
@@ -32,17 +35,26 @@ class LiveEventListCell: UITableViewCell {
             self.coverImage.contentMode = .scaleAspectFill
             self.coverImage.backgroundColor = .black
         } else {
-            self.coverImage.image = UIImage(named: "icon-user")?.resize(with: .init(width: 32, height: 32)).sbu_with(tintColor: SBUColorSet.background50)
-            self.coverImage.backgroundColor = SBUColorSet.background300
+            self.coverImage.image = UIImage(named: "iconLive")?.resize(with: .init(width: 32, height: 32)).sbu_with(tintColor: .white)
+            self.coverImage.backgroundColor = liveEvent.getRandomCoverColor()
             self.coverImage.contentMode = .center
         }
 
         // Title
-        self.liveEventLabel.text = liveEvent.title?.trimmed.collapsed ?? "Live Event"
+        let title = liveEvent.title?.trimmed.collapsed ?? "Live Event"
+        self.liveEventLabel.text = "\(title) (\(liveEvent.type == .video ? "Video" : "Audio"))"
 
         let isLive = [LiveEvent.State.ready, .ongoing].contains(liveEvent.state)
-        self.participantCountLabel.text = isLive ? "\(liveEvent.participantCount) watching" : nil
+        var hostListString = liveEvent.hosts.map { $0.userId }.prefix(3).joined(separator: ", ")
+        if liveEvent.hosts.count > 3 {
+            hostListString.append(contentsOf: " + \(liveEvent.hosts.count - 3)")
+        }
+        
+        self.hostListLabel.text = liveEvent.hosts.isEmpty ? "—" : "Host: \(hostListString)"
 
+        self.liveActiveIndicator.backgroundColor = liveEvent.state == .ongoing ? .red : .gray
+        self.participantCountLabel.text = isLive ? "\(liveEvent.participantCount)" : "0"
+        
         switch liveEvent.state {
         case .created:
             statusLabel.backgroundColor = SBUColorSet.primary100
