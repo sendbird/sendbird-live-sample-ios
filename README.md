@@ -14,9 +14,6 @@ To see the video live event sample, open the `VideoLive.xcodeproj` file.
 ### Audio Live  
 To see the audio-only live event sample, open the `AudioOnlyLive.xcodeproj` file.
 
-### Video Live with UIKit  
-To see the audio-only live event sample, open the `VideoLiveUIKit.xcodeproj` file. 
-
 --- 
 
 To learn more about Sendbird Live, please visit our [docs page](https://sendbird.com/docs/live/sdk/v1/ios/getting-started/start-your-first-live). 
