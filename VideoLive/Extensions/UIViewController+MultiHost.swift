@@ -27,28 +27,3 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-extension UIView {
-    func embed(_ videoView: SendbirdVideoView) {
-        insertSubview(videoView, at: 0)
-        videoView.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|[view]|",
-                options: [],
-                metrics: nil,
-                views: ["view": videoView]
-            )
-        )
-        addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|[view]|",
-                options: [],
-                metrics: nil,
-                views: ["view": videoView]
-            )
-        )
-
-        layoutIfNeeded()
-    }
-}
