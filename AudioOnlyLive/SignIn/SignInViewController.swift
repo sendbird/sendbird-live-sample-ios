@@ -53,7 +53,7 @@ class SignInViewController: UIViewController {
         SendbirdLive.initialize(params: .init(applicationId: appId), migrationStartHandler: nil, completionHandler: { _ in
             SendbirdLive.setLogLevel(.verbose)
             SendbirdLive.executeOn(.main)
-            SendbirdLive.authenticate(userId: userId) { result in
+            SendbirdLive.authenticate(userId: userId, accessToken: accessToken) { result in
                 SendbirdUI.connect { user, error in
                     DispatchQueue.main.async {
                         self.signInButton.isEnabled = true

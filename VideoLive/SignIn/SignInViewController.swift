@@ -53,7 +53,7 @@ class SignInViewController: UIViewController {
         SendbirdLive.initialize(params: .init(applicationId: appId), migrationStartHandler: nil, completionHandler: { _ in
             SendbirdLive.setLogLevel(.verbose)
             SendbirdLive.executeOn(.main)
-            SendbirdLive.authenticate(userId: userId) { result in
+            SendbirdLive.authenticate(userId: userId, accessToken: accessToken) { result in
                 let params = UserUpdateParams()
                 params.nickname = userId
                 SendbirdChat.updateCurrentUserInfo(params: params)
