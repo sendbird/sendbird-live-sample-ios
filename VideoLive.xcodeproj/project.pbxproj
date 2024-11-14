@@ -34,6 +34,7 @@
 		5288D5CC2AD784DD00BDE705 /* HostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5288D5CB2AD784DD00BDE705 /* HostCollectionViewCell.xib */; };
 		52E586CE2AC2C189002A1A20 /* LiveEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E586CD2AC2C189002A1A20 /* LiveEventViewController.swift */; };
 		52E586D02AC2C354002A1A20 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E586CF2AC2C354002A1A20 /* FlowLayout.swift */; };
+		9C1F41972CE5C6D900253347 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1F41962CE5C6D900253347 /* ChannelListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		5288D5CB2AD784DD00BDE705 /* HostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HostCollectionViewCell.xib; sourceTree = "<group>"; };
 		52E586CD2AC2C189002A1A20 /* LiveEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventViewController.swift; sourceTree = "<group>"; };
 		52E586CF2AC2C354002A1A20 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		9C1F41962CE5C6D900253347 /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				52C105812AE760A50062BA89 /* CreateLiveEvent */,
 				523A94BB2AC2BAA30079C4C8 /* LiveEventList */,
 				523A94A12AC2BA9B0079C4C8 /* LiveEvent */,
+				9C1F41952CE5C60500253347 /* ChannelList */,
 				523A949C2ABA8FB90079C4C8 /* Extensions */,
 				523A947C2ABA8F540079C4C8 /* Main.storyboard */,
 				523A947F2ABA8F550079C4C8 /* Assets.xcassets */,
@@ -172,6 +175,14 @@
 				52347BD12AD9047E00AC2D94 /* HostSelectionViewController.swift */,
 			);
 			path = CreateLiveEvent;
+			sourceTree = "<group>";
+		};
+		9C1F41952CE5C60500253347 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				9C1F41962CE5C6D900253347 /* ChannelListViewController.swift */,
+			);
+			path = ChannelList;
 			sourceTree = "<group>";
 		};
 		EEA29718498C72A7FE434C02 /* Frameworks */ = {
@@ -284,6 +295,7 @@
 				523A949B2ABA8FB50079C4C8 /* UIViewController+MultiHost.swift in Sources */,
 				523A94BE2AC2BAA30079C4C8 /* SignInViewController.swift in Sources */,
 				52E586D02AC2C354002A1A20 /* FlowLayout.swift in Sources */,
+				9C1F41972CE5C6D900253347 /* ChannelListViewController.swift in Sources */,
 				523A94B32AC2BA9B0079C4C8 /* LiveEventSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

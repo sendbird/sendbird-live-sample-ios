@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6d-Vh-vwa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6d-Vh-vwa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -156,6 +157,7 @@
                     <connections>
                         <segue destination="E0S-WT-Cw4" kind="relationship" relationship="viewControllers" id="it1-v9-b6c"/>
                         <segue destination="ebX-W4-Irc" kind="relationship" relationship="viewControllers" id="xrz-YR-c2g"/>
+                        <segue destination="LnJ-j2-EUc" kind="relationship" relationship="viewControllers" id="4J2-oQ-2ls"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99C-vJ-hCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -367,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykG-W0-MuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380.91603053435114" y="587.32394366197184"/>
+            <point key="canvasLocation" x="534" y="619"/>
         </scene>
         <!--Item-->
         <scene sceneID="Vso-tA-Rie">
@@ -387,7 +389,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5h-IQ-vTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="-822"/>
+            <point key="canvasLocation" x="534" y="-823"/>
         </scene>
         <!--Live events-->
         <scene sceneID="WDO-cE-d35">
@@ -554,7 +556,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRn-AK-ixr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107.6335877862596" y="-823.23943661971839"/>
+            <point key="canvasLocation" x="1291" y="-823"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qrt-w6-Mhg">
+            <objects>
+                <navigationController id="LnJ-j2-EUc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4SI-sp-EdW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beh-3a-NH1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z5U-Bx-ZJA" kind="relationship" relationship="rootViewController" id="BIe-D2-38l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pj4-Cp-8zr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="-139"/>
+        </scene>
+        <!--Channel-->
+        <scene sceneID="kTk-JA-0NX">
+            <objects>
+                <viewController id="z5U-Bx-ZJA" customClass="ChannelListViewController" customModule="VideoLive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EX-oy-zwj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="8gx-0V-dbQ">
+                                <rect key="frame" x="93.666666666666686" y="374.33333333333331" width="206" height="103.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-SE-7IK">
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Show GroupChannel list"/>
+                                        <connections>
+                                            <action selector="onClickShowGroupChannelList:" destination="z5U-Bx-ZJA" eventType="touchUpInside" id="czT-YF-I1I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWV-hW-8k8">
+                                        <rect key="frame" x="0.0" y="69.333333333333371" width="206" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Show OpenChannel list"/>
+                                        <connections>
+                                            <action selector="onClickShowOpenChannelList:" destination="z5U-Bx-ZJA" eventType="touchUpInside" id="4WZ-yY-zE1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jIM-9n-Id8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8gx-0V-dbQ" firstAttribute="centerX" secondItem="4EX-oy-zwj" secondAttribute="centerX" id="dGg-Ol-ItB"/>
+                            <constraint firstItem="8gx-0V-dbQ" firstAttribute="centerY" secondItem="4EX-oy-zwj" secondAttribute="centerY" id="qSw-hm-qey"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Channel" image="icon-chat-filled" selectedImage="icon-chat-filled" id="WwB-rf-OvM">
+                        <color key="badgeColor" name="Primary-300"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="hBP-dR-E8w"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eP7-nm-x2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-139"/>
         </scene>
         <!--Live Event View Controller-->
         <scene sceneID="b3C-rl-TpM">
@@ -677,6 +743,15 @@
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibd-Hl-VUP">
+                                        <rect key="frame" x="151" y="58" width="91" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reaction"/>
+                                        <connections>
+                                            <action selector="onClickReaction:" destination="1yS-qq-uiU" eventType="touchUpInside" id="hDv-YQ-bj4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -801,7 +876,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r49-wJ-WaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3015" y="-823"/>
+            <point key="canvasLocation" x="2502" y="-1473"/>
         </scene>
         <!--New Live Event-->
         <scene sceneID="MML-nd-cHb">
@@ -976,7 +1051,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1726" y="-82"/>
+            <point key="canvasLocation" x="2503" y="-823"/>
         </scene>
         <!--Users who can be host-->
         <scene sceneID="Eht-6G-wme">
@@ -1055,7 +1130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBU-Uv-hyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="-82"/>
+            <point key="canvasLocation" x="3437" y="-823"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.76078431372549016" green="0.66274509803921566" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -1065,6 +1140,7 @@
         <image name="icon-audio-on" width="64" height="64"/>
         <image name="icon-camera" width="32" height="32"/>
         <image name="icon-camera-switch" width="64" height="64"/>
+        <image name="icon-chat-filled" width="24" height="24"/>
         <image name="icon-members" width="16" height="16"/>
         <image name="icon-operator" width="24" height="24"/>
         <image name="icon-user" width="46" height="46"/>
@@ -1076,17 +1152,20 @@
         <image name="iconSettingsFilledSelected" width="24" height="24"/>
         <image name="live_horizontal" width="114" height="48"/>
         <image name="sendbird_horizontal" width="117" height="20.333333969116211"/>
+        <namedColor name="Primary-300">
+            <color red="0.45490196078431372" green="0.17647058823529413" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

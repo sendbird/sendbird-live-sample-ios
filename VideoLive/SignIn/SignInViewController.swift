@@ -45,38 +45,49 @@ class SignInViewController: UIViewController {
         SBUGlobals.currentUser = .init(userId: userId)
         SBUGlobals.accessToken = accessToken
         SBUGlobals.applicationId = appId
-        SBUTheme.set(theme: .dark)
-
+        
         self.signInButton.isEnabled = false
-
-        // Update app ID
-        SendbirdLive.initialize(params: .init(applicationId: appId), migrationStartHandler: nil, completionHandler: { _ in
-            SendbirdLive.setLogLevel(.verbose)
-            SendbirdLive.executeOn(.main)
-            SendbirdLive.authenticate(userId: userId, accessToken: accessToken) { result in
-                let params = UserUpdateParams()
-                params.nickname = userId
-                SendbirdChat.updateCurrentUserInfo(params: params)
-
-                SendbirdUI.connect { _, error in
-                    DispatchQueue.main.async {
-                        self.signInButton.isEnabled = true
-
-                        switch result {
-                        case .success:
-                            UserDefaults.standard.set(userId, forKey: "userId")
-                            UserDefaults.standard.set(accessToken, forKey: "accessToken")
-                            UserDefaults.standard.set(appId, forKey: "applicationId")
-                            self.performSegue(withIdentifier: "login", sender: nil)
-
-                        case .failure(let error):
-                            self.presentErrorAlert(message: error.localizedDescription)
+        
+        let logLevel: SendbirdChatSDK.LogLevel = .none
+        SendbirdUI.initialize(applicationId: appId,
+                              initParamsBuilder: { params in
+            params?.isLocalCachingEnabled = false
+            params?.needsSynchronous = false
+            params?.localCacheConfig = nil
+            params?.logLevel = logLevel
+        }) { error in
+            SendbirdLive.initialize(
+                params: .init(applicationId: appId),
+                migrationStartHandler: nil) { _ in
+                    SendbirdLive.setLogLevel(.verbose)
+                    SendbirdLive.executeOn(.main)
+                    SendbirdUI.connect { user, error in
+                        SendbirdLive.authenticate(
+                            userId: userId,
+                            accessToken: accessToken
+                        ) { result in
+                            DispatchQueue.main.async {
+                                self.signInButton.isEnabled = true
+                                
+                                switch result {
+                                case .success:
+                                    UserDefaults.standard.set(userId, forKey: "userId")
+                                    UserDefaults.standard.set(accessToken, forKey: "accessToken")
+                                    UserDefaults.standard.set(appId, forKey: "applicationId")
+                                    self.performSegue(withIdentifier: "login", sender: nil)
+                                    
+                                case .failure(let error):
+                                    self.presentErrorAlert(message: error.localizedDescription)
+                                }
+                            }
                         }
                     }
                 }
             }
-        })
     }
+    
+    
+    
 }
 
 // MARK: - UITextFieldDelegate

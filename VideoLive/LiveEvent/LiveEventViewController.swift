@@ -103,6 +103,7 @@ class LiveEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         liveEvent.addDelegate(self, forKey: "LiveEventViewController")
         
         collectionView.register(UINib(nibName: "HostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "host")
@@ -226,6 +227,13 @@ class LiveEventViewController: UIViewController {
             break
         }
     }
+    @IBAction func onClickReaction(_ sender: Any) {
+        guard let liveEvent = liveEvent else { return }
+        
+        liveEvent.increaseReactionCount(key: "LIKE") { result in
+            debugPrint("\(#function) - [Live reaction] increaseReactionCount result: \(result)")
+        }
+    }
 }
 
 extension LiveEventViewController: LiveEventDelegate {
@@ -342,7 +350,7 @@ extension LiveEventViewController: LiveEventDelegate {
     }
 
     func didReactionCountUpdate(_ liveEvent: SendbirdLiveSDK.LiveEvent, key: String, value: Int) {
-
+        debugPrint("\(#function) - [Live reaction] didReactionCountUpdate key: \(key), value: \(value)")
     }
 }
 
