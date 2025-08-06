@@ -534,7 +534,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sendbird/sendbird-live-sdk-ios/";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 1.5.0;
 			};
 		};
